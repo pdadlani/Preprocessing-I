@@ -79,10 +79,17 @@ html, body {
 	display: flex;
 }
 
+.center-text {
+	justify-content: center;
+}
 
 nav {
 	.header-footer-format();
 	justify-content: flex-end;
+
+	@media (max-width: 500px) {
+		.center-text()	
+	}
 	
 	a {
 		padding: @padding-h;
@@ -94,20 +101,34 @@ nav {
 	margin: 20px;
 	background-color: lightgray;
 
+	@media (max-width: 500px) {
+		margin: 10px;
+	}
+
 	header {
 		padding: @padding-h;
 	}
+
 
 	.text {
 		h1 {
 			.name-pd();
 			padding: @padding-h;
 
+			@media (max-width: 500px) {
+				font-size: 2.0rem;
+				display: flex;
+				.center-text();			
+			}
 		}
 		
 		h2, h3 {
 			.text-big();
 			padding: @padding-h;
+
+			@media (max-width: 500px) {
+				font-size: 1.2rem;
+			}
 		}
 	}
 
@@ -118,6 +139,7 @@ nav {
 
 		.intro {
 			background-color: white;
+
 			img {
 				width: 8%
 				height: 8%;
@@ -140,6 +162,7 @@ nav {
 
 	.work-experience {
 		justify-content:space-around;
+
 		h3 {
 			font-size: 1.2rem;
 		}

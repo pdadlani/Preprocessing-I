@@ -147,9 +147,17 @@ body {
 .header-footer-format {
   display: flex;
 }
+.center-text {
+  justify-content: center;
+}
 nav {
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  nav {
+    justify-content: center;
+  }
 }
 nav a {
   padding: 10px;
@@ -159,6 +167,11 @@ nav a {
   margin: 20px;
   background-color: lightgray;
 }
+@media (max-width: 500px) {
+  .container {
+    margin: 10px;
+  }
+}
 .container header {
   padding: 10px;
 }
@@ -167,12 +180,25 @@ nav a {
   font-size: 3rem;
   padding: 10px;
 }
+@media (max-width: 500px) {
+  .container .text h1 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
 .container .text h2,
 .container .text h3 {
   color: darkblue;
   font-family: 'Alegreya SC';
   font-size: 1.5rem;
   padding: 10px;
+}
+@media (max-width: 500px) {
+  .container .text h2,
+  .container .text h3 {
+    font-size: 1.2rem;
+  }
 }
 .container .main {
   display: flex;
