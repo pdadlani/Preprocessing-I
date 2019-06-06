@@ -57,3 +57,146 @@ html, body {
     height: 100%;
 }
 
+/* Variables */
+@header-color: darkblue;
+@text-font: 'Alegreya SC';
+@padding-p: 5px;
+@padding-h: @padding-p * 2;
+
+
+.name-pd {
+	font-family: 'Sofia';	
+	font-size: 3.0rem;
+}
+
+.text-big {
+	color: @header-color;
+	font-family: @text-font;
+	font-size: 1.5rem;
+}
+
+.header-footer-format {
+	display: flex;
+}
+
+.center-text {
+	justify-content: center;
+}
+
+nav {
+	.header-footer-format();
+	justify-content: flex-end;
+
+	@media (max-width: 500px) {
+		.center-text()	
+	}
+	
+	a {
+		padding: @padding-h;
+	}
+}
+
+.container {
+	max-width: 880px;
+	margin: 20px;
+	background-color: lightgray;
+
+	@media (max-width: 500px) {
+		margin: 10px;
+	}
+
+	header {
+		padding: @padding-h;
+	}
+
+
+	.text {
+		h1 {
+			.name-pd();
+			padding: @padding-h;
+
+			@media (max-width: 500px) {
+				font-size: 2.0rem;
+				display: flex;
+				.center-text();			
+			}
+		}
+		
+		h2, h3 {
+			.text-big();
+			padding: @padding-h;
+
+			@media (max-width: 500px) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.intro {
+			background-color: white;
+
+			img {
+				width: 8%
+				height: 8%;
+			}
+		}
+	}
+
+	.skills {
+		justify-content:space-around;
+
+		h3 {
+			font-size: 1.2rem;
+		}
+		div {
+			display: table-cell;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+	}
+
+	.work-experience {
+		justify-content:space-around;
+
+		h3 {
+			font-size: 1.2rem;
+		}
+	}
+
+	p {
+		line-height: 1.25;
+		margin: 20px 0;
+		font-family: @text-font;
+		padding: @padding-h;
+		padding-top: 0px;
+	}
+
+	footer {
+		.header-footer-format();
+		justify-content: center;
+		padding: @padding-h;
+			
+		a {
+			padding: @padding-p;
+		}
+	}
+}
+
+.contact-container {
+	max-width: 880px;
+	margin: 20px;
+
+	h1 {
+		.name-pd();
+	}
+
+	header {
+		.text-big();
+
+	}
+}
