@@ -96,9 +96,10 @@ nav {
 	}
 }
 
+
 .container {
 	max-width: 880px;
-	margin: 20px;
+	margin: 20px auto;
 	background-color: lightgray;
 
 	@media (max-width: 500px) {
@@ -107,8 +108,7 @@ nav {
 
 	header {
 		padding: @padding-h;
-	}
-
+	}	
 
 	.text {
 		h1 {
@@ -153,10 +153,24 @@ nav {
 		h3 {
 			font-size: 1.2rem;
 		}
+
 		div {
 			display: table-cell;
 			flex-wrap: wrap;
 			flex-direction: column;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+
+			.column {
+				float: left;
+				width: 25%;
+				padding: 10px;
+				height: 300px;
+			}
 		}
 	}
 
@@ -178,7 +192,7 @@ nav {
 
 	footer {
 		.header-footer-format();
-		justify-content: center;
+		.center-text;
 		padding: @padding-h;
 			
 		a {
@@ -189,14 +203,33 @@ nav {
 
 .contact-container {
 	max-width: 880px;
-	margin: 20px;
+	margin: 20px auto;
+
 
 	h1 {
 		.name-pd();
+
+		@media (max-width: 500px) {
+			font-size: 2.0rem;
+		}
 	}
 
 	header {
 		.text-big();
-
+		display: flex;
+		.center-text();
+		margin: 20px;
 	}
+
+	.contact-main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: @padding-h;
+
+		h2 {
+			padding: @padding-h;
+		}
+	}
+
 }
